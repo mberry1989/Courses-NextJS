@@ -5,8 +5,7 @@ interface LessonsProps{
   header: string,
   subHeader:string,
   backgroundImage: string,
-  content: Elements.RichTextElement
-
+  content: Elements.RichTextElement,
 }
 
 export default function LessonComponent({header, subHeader, backgroundImage, content}:LessonsProps){

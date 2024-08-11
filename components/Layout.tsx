@@ -15,10 +15,12 @@ interface CoursesProps {
 
 export default function Main({courses}:CoursesProps) {
   return (
-    <div className="grotesk max-w-8xl mx-auto">
+    <div className="grotesk max-w-8xl mx-auto" 
+      data-kontent-project-id={process.env.KONTENT_ENVIRONMENT_ID}
+      data-kontent-language-codename='default'>
       {courses.map(course => {
         return(
-        <div key={course.system.id}>
+        <div key={course.system.id} data-kontent-item-id={course.system.id}>
           <Banner 
             title={course.elements.title.value}
             summary={course.elements.summary.value}

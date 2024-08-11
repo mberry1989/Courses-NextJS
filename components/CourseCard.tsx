@@ -8,7 +8,7 @@ interface CourseProps{
 export default function CourseCard({course}:CourseProps){
     return(
         <>
-        <div className="flex w-full flex-row justify-center text-center">
+        <div className="flex w-full flex-row justify-center text-center" data-kontent-element-codename='description'>
             <div
               className="underline-gray px-8 text-xl font-semibold text-black"
             >

@@ -11,6 +11,7 @@
   "dependencies": {
     "@kontent-ai/delivery-sdk": "^14.10.0",
     "@kontent-ai/rich-text-resolver": "^1.1.3",
+    "@kontent-ai/smart-link": "^3.3.0",
     "@portabletext/react": "^3.1.0",
     "next": "^14.2.5",
     "react": "^18.3.1",

@@ -97,12 +97,22 @@ export const createDefaultResolvers = (
         case 'lesson':
           const lesson = componentItem as Lesson
           return (
+            <div
+            data-kontent-add-button
+            data-kontent-render-position='bottom'
+            data-kontent-insert-position='end'
+            >
+            <div 
+              data-kontent-component-id={lesson.system.id}
+              >
             <LessonComponent
               header={lesson.elements.header.value} 
               subHeader={lesson.elements.subHeader.value}
               backgroundImage={lesson.elements.backgroundImage.value[0].url}
               content={lesson.elements.content}
             />
+            </div>
+            </div>
           );
           case 'fact':
           const fact = componentItem as Fact

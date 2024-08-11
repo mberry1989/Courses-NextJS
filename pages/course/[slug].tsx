@@ -8,6 +8,7 @@ interface CoursesProps {
   }
 
 export default function Course({courses}:CoursesProps) {
+    
   return (
     <>
       <Head>
