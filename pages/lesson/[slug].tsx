@@ -22,7 +22,7 @@ export default function Lessons({lessons, courseId}:LessonsProps) {
        data-kontent-language-codename='default'
       data-kontent-item-id={courseId}
       data-kontent-element-codename='lessons'>
-        <RichTextElement element={lessons} isInsideTable={false} language={"default"}/>
+        <RichTextElement element={lessons} isInsideTable={false} language={"default"} courseId={courseId}/>
       </div>
     </>
   );
