@@ -37,7 +37,7 @@ export default function Main({courses}:CoursesProps) {
             <Section header={course.elements.title.value} body={course.elements.description}/>
             <div className="flex justify-center p-4">
               <Link
-              href={`/lessons/${course.system.codename}`}
+              href={`/lesson/${course.system.codename}`}
               className="text-center bg-emerald-700 text-white p-4 mt-12 rounded">
               Start Course
               </Link>
