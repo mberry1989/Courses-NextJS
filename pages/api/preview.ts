@@ -4,7 +4,7 @@ import { previewApiKeyCookieName } from "../../lib/cookies";
 
 const handler: NextApiHandler = async (req, res) => {
   // TODO move secret to env variables
-  if (req.query.secret !== 'mySuperSecret' || !req.query.slug ||!req.query.slug) {
+  if (req.query.secret !== 'mySuperSecret' || !req.query.slug ||!req.query.type) {
     res.status(401).json({ message: 'Invalid preview token, or no slug and type provided.' });
     return;
   }
@@ -18,11 +18,10 @@ const handler: NextApiHandler = async (req, res) => {
     res.setHeader("Set-Cookie", newCookieHeader);
   }
   let url ='/'
-  if(req.query.type === 'lesson') {
+  if(req.query.type !== 'web_spotlight_root') {
   // Redirect to the path from the fetched post
-   url = `/lessons/${req.query.slug}`
+   url = `/${req.query.type}/${req.query.slug}`
     }
-  // Redirect to the path from the fetched post
   res.redirect(url);
 }
 

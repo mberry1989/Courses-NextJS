@@ -31,7 +31,7 @@ export default function Main({courses}:CoursesProps) {
             subtext={course.elements.summary.value.substring(0,200)}
 
             />
-          <div className="mx-auto px-5 pt-32 pb-12 lg:px-24 bg-gray-300 rounded-2xl">
+          <div className="mx-auto px-5 pt-32 pb-12 lg:px-24 bg-gray-300 rounded-2xl mb-24">
             <Heading />
             <CourseCard course={course}/>
             <Section header={course.elements.title.value} body={course.elements.description}/>
