@@ -8,7 +8,7 @@ interface FactProps{
 export default function FactComponent({title, body}:FactProps){ 
     return (
         <div className="w-96 bg-gray-400 rounded-2xl p-4 border-yellow-300 border-2">
-            <h2 className="w-full lg:text-[4.2em] text-3xl font-bold leading-none text-yellow-300 text-center">
+            <h2 className="w-full text-6xl font-bold leading-none text-yellow-300 text-center">
               {title}
             </h2>
 

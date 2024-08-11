@@ -15,7 +15,7 @@ export default function LessonComponent({header, subHeader, backgroundImage, con
         <div className="bg-cover bg-center h-screen" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="max-w-8xl mx-auto inline-block items-center p-3 pt-0 lg:flex lg:flex-wrap lg:pt-4">
           <div className="w-full p-12">
-            <h2 className="w-9/12 lg:text-[4.2em] text-3xl font-bold leading-none text-yellow-300">
+            <h2 className="w-9/12 lg:text-[4.2em] text-3xl font-bold leading-none text-black">
               {header}
             </h2>
 
