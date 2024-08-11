@@ -1,9 +1,7 @@
-import { Elements } from "@kontent-ai/delivery-sdk";
 import Head from "next/head";
 import { getItemByCodename, getItemsOfType } from "../../services/kontentClient";
-import { Course } from "../../models";
-import { RichTextElement } from "../../components/RichTextComponent";
 import Layout from "../../components/Layout";
+import type { Course } from "../../models";
 
 interface CoursesProps {
     courses:Array<Course>
@@ -24,7 +22,7 @@ export default function Course({courses}:CoursesProps) {
 
   export async function getStaticPaths() {
     const courses = await getItemsOfType<Course>('course', 5)
-    const coursesLessonsUrls = courses.map((item) => {
+    const coursesUrls = courses.map((item) => {
       return {
         params: {
           slug: item.system.codename
@@ -33,7 +31,7 @@ export default function Course({courses}:CoursesProps) {
     });
   
     return {
-      paths: coursesLessonsUrls,
+      paths: coursesUrls,
       fallback: false,
     };
   }
