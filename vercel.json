@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "pages/api/create-environment.ts": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  }
+}
