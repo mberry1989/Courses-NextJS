@@ -173,7 +173,7 @@ export const createDefaultResolvers = (
   block: {
     // TODO don't resolve when block contains link type markdef
     h1: ({ value, children }) => (
-      <h1 className='scroll-mt-20 heading' id={sanitizeFirstChildText(value)}>
+      <h1 className='scroll-mt-20 heading text-4xl w-screen self-center text-blue-500' id={sanitizeFirstChildText(value)}>
         <a href={`#${sanitizeFirstChildText(value)}`}>{children}</a>
       </h1>
     ),
